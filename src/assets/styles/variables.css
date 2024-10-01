@@ -1,0 +1,22 @@
+:root {
+  /* Fonts */
+  --font-family-sans-serif: 'Inter', sans-serif;
+  --font-family-display: 'Orbitron', sans-serif;
+
+  /* Colors */
+  --color-electric-blue: hsl(200, 100%, 50%);
+  --color-electric-blue-transparent: hsla(200, 100%, 50%, 0.5);
+  --color-neon-green: hsl(120, 100%, 40%);
+  --color-magenta-glow: hsl(300, 100%, 55%);
+  --color-dark-background: hsl(220, 15%, 10%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-soft-gray: hsl(0, 0%, 75%);
+  --color-header-background: hsl(220, 20%, 20%);
+
+  /* Sizes */
+  --height-header: 60px;
+
+  /* Z-Index */
+  --z-index-sidebar-menu-backdrop: 100;
+  --z-index-sidebar-menu: 200;
+}

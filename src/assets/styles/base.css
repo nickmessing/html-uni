@@ -1,0 +1,11 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--color-dark-background);
+  color: var(--color-white);
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--font-family-sans-serif);
+}

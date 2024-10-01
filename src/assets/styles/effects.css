@@ -1,0 +1,80 @@
+:root {
+  --glitch-offset-x: 0;
+  --glitch-offset-y: 0;
+}
+
+.glitch {
+  position: relative;
+  animation: glitch 725ms infinite;
+  text-shadow:
+    0.05em 0 0 var(--color-electric-blue),
+    -0.03em -0.04em 0 var(--color-magenta-glow),
+    0.025em 0.04em 0 var(--color-neon-green);
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: var(--glitch-offset-y);
+    left: var(--glitch-offset-x);
+    opacity: 0.75;
+    opacity: 0.75;
+    content: attr(data-glitch-content);
+  }
+
+  &::before {
+    transform: translate(-0.04em, -0.03em);
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    animation: glitch 500ms infinite;
+  }
+
+  &::after {
+    transform: translate(0.04em, 0.03em);
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    animation: glitch 375ms infinite;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow:
+      0.05em 0 0 var(--color-electric-blue),
+      -0.03em -0.04em 0 var(--color-magenta-glow),
+      0.025em 0.04em 0 var(--color-neon-green);
+  }
+  15% {
+    text-shadow:
+      0.05em 0 0 var(--color-electric-blue),
+      -0.03em -0.04em 0 var(--color-magenta-glow),
+      0.025em 0.04em 0 var(--color-neon-green);
+  }
+  16% {
+    text-shadow:
+      -0.05em -0.025em 0 var(--color-electric-blue),
+      0.025em 0.035em 0 var(--color-magenta-glow),
+      -0.05em -0.05em 0 var(--color-neon-green);
+  }
+  49% {
+    text-shadow:
+      -0.05em -0.025em 0 var(--color-electric-blue),
+      0.025em 0.035em 0 var(--color-magenta-glow),
+      -0.05em -0.05em 0 var(--color-neon-green);
+  }
+  50% {
+    text-shadow:
+      0.05em 0.035em 0 var(--color-electric-blue),
+      0.03em 0 0 var(--color-magenta-glow),
+      0 -0.04em 0 var(--color-neon-green);
+  }
+  99% {
+    text-shadow:
+      0.05em 0.035em 0 var(--color-electric-blue),
+      0.03em 0 0 var(--color-magenta-glow),
+      0 -0.04em 0 var(--color-neon-green);
+  }
+  100% {
+    text-shadow:
+      -0.05em 0 0 var(--color-electric-blue),
+      -0.025em -0.04em 0 var(--color-magenta-glow),
+      -0.04em -0.025em 0 var(--color-neon-green);
+  }
+}
