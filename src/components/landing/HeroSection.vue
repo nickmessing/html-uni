@@ -55,7 +55,7 @@
 
     > p {
       color: var(--color-soft-gray);
-      font-size: 1.25rem;
+      font-size: 1rem;
       text-align: center;
     }
   }

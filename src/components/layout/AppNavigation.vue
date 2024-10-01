@@ -94,8 +94,8 @@ const isOpen = defineModel<boolean>('isOpen', {
       --glitch-offset-y: 0.25rem;
 
       &.active {
-        outline: 2px solid var(--color-neon-green);
-        box-shadow: 0 0 20px var(--color-neon-green);
+        outline: 2px solid var(--color-magenta-glow);
+        box-shadow: 0 0 20px var(--color-magenta-glow);
         background: hsla(0, 0%, 100%, 0.1);
         color: white;
       }
@@ -118,7 +118,7 @@ const isOpen = defineModel<boolean>('isOpen', {
           text-decoration: none;
 
           &:hover {
-            color: var(--color-neon-green);
+            color: var(--color-magenta-glow);
           }
         }
       }
