@@ -54,7 +54,7 @@
     }
 
     > p {
-      color: var(--color-white);
+      color: var(--color-soft-gray);
       font-size: 1.25rem;
       text-align: center;
     }
