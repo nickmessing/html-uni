@@ -5,9 +5,11 @@
         <source src="https://assets.html.nickmessing.com/background.webm" type="video/webm" />
       </video>
       <div class="content">
-        <h1 class="glitch" data-glitch-content="Salut, eu sunt Nicolai Moraru, dezvoltator de software și DJ.">
-          Salut, eu sunt Nicolai Moraru, dezvoltator de software și DJ.
-        </h1>
+        <div class="h1-container">
+          <h1 class="glitch" data-glitch-content="Salut, eu sunt Nicolai Moraru, dezvoltator de software și DJ.">
+            Salut, eu sunt Nicolai Moraru, dezvoltator de software și DJ.
+          </h1>
+        </div>
         <p>Frontend, Backend, Muzică. Explorăm viitorul împreună.</p>
         <div class="sentences">
           <div class="sentence">
@@ -27,14 +29,14 @@
 
 <style scoped>
 .hero-section-container {
-  --height-section-container: calc(20rem + var(--height-section));
+  --height-section-container: calc(30rem + var(--height-section));
   height: var(--height-section-container);
-  view-timeline: --subjectReveal block;
+  view-timeline: --container-scroll-timeline block;
 
   .hero-section {
     position: relative;
     width: 100dvw;
-    animation-timeline: --subjectReveal;
+    animation-timeline: --container-scroll-timeline;
     animation-name: keep-in-view;
     animation-range: contain 0% contain 100%;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
@@ -68,13 +70,22 @@
       width: 100%;
       height: 100%;
 
-      > h1 {
-        color: var(--color-white);
-        font-weight: bold;
-        font-size: 2.25rem;
-        line-height: 2.5rem;
-        font-family: var(--font-family-display);
-        text-align: center;
+      > .h1-container {
+        animation-timeline: --container-scroll-timeline;
+        animation-name: h1;
+        animation-range: contain 0% contain 100%;
+        animation-duration: 1ms; /* Firefox requires this to apply the animation */
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+
+        > h1 {
+          color: var(--color-white);
+          font-weight: bold;
+          font-size: 2.25rem;
+          line-height: 2.5rem;
+          font-family: var(--font-family-display);
+          text-align: center;
+        }
       }
 
       > p {
@@ -98,7 +109,7 @@
           color: var(--color-white);
           font-size: 1rem;
           text-align: center;
-          animation-timeline: --subjectReveal;
+          animation-timeline: --container-scroll-timeline;
           animation-duration: 1ms; /* Firefox requires this to apply the animation */
           animation-timing-function: linear;
           animation-fill-mode: both;
@@ -147,6 +158,15 @@
   100% {
     transform: translate(-50%, calc(-50% + 1rem));
     opacity: 0;
+  }
+}
+
+@keyframes h1 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-3rem);
   }
 }
 </style>
