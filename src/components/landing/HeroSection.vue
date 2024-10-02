@@ -2,7 +2,7 @@
   <div class="hero-section-container">
     <div id="hero" class="hero-section">
       <video autoplay loop muted>
-        <source src="https://html-nm-assets.fra1.cdn.digitaloceanspaces.com/background.webm" type="video/webm" />
+        <source src="https://assets.html.nickmessing.com/background.webm" type="video/webm" />
       </video>
       <div class="content">
         <h1 class="glitch" data-glitch-content="Salut, eu sunt Nicolai Moraru, dezvoltator de software și DJ.">
