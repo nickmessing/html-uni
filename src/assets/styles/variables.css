@@ -15,6 +15,7 @@
 
   /* Sizes */
   --height-header: 60px;
+  --height-section: calc(100dvh - var(--height-header));
 
   /* Z-Index */
   --z-index-sidebar-menu-backdrop: 100;
