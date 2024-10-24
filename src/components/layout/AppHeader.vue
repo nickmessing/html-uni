@@ -28,6 +28,7 @@ const name = 'Nicolai Moraru'
   flex-shrink: 0;
   flex-direction: row;
   align-items: center;
+  z-index: var(--z-index-header);
   background-color: var(--color-header-background);
   padding: 0 1rem;
   height: var(--height-header);

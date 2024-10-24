@@ -18,6 +18,7 @@
   --height-section: calc(100dvh - var(--height-header));
 
   /* Z-Index */
-  --z-index-sidebar-menu-backdrop: 100;
-  --z-index-sidebar-menu: 200;
+  --z-index-header: 100;
+  --z-index-sidebar-menu-backdrop: 200;
+  --z-index-sidebar-menu: 300;
 }

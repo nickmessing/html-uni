@@ -24,25 +24,160 @@
         </div>
       </div>
     </div>
+    <div v-for="dotIndex in 19" :key="dotIndex" :class="`dot-${dotIndex}`" class="dot" />
   </div>
 </template>
 
 <style scoped>
 .hero-section-container {
   --height-section-container: calc(30rem + var(--height-section));
+  position: relative;
   height: var(--height-section-container);
   view-timeline: --container-scroll-timeline block;
 
-  .hero-section {
+  > .dot {
+    --dot-size: 0.5rem;
+    --dot-color: var(--color-electric-blue);
+    --dot-distance-top: 0px;
+    --dot-distance-left: 0px;
+    position: absolute;
+    top: var(--dot-distance-top);
+    left: var(--dot-distance-left);
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    animation: grow 3s infinite;
+    animation-timing-function: ease-in-out;
+    box-shadow: 0 0 var(--dot-size) var(--dot-color);
+    border-radius: calc(var(--dot-size) * 0.5);
+    background-color: var(--dot-color);
+    width: var(--dot-size);
+    height: var(--dot-size);
+
+    &.dot-1 {
+      --dot-distance-top: 5%;
+      --dot-distance-left: 10%;
+      --dot-color: var(--color-electric-blue);
+    }
+
+    &.dot-2 {
+      --dot-distance-top: 10%;
+      --dot-distance-left: 63%;
+      --dot-color: var(--color-neon-green);
+    }
+
+    &.dot-3 {
+      --dot-distance-top: 15%;
+      --dot-distance-left: 40%;
+      --dot-color: var(--color-magenta-glow);
+    }
+
+    &.dot-4 {
+      --dot-distance-top: 20%;
+      --dot-distance-left: 12%;
+      --dot-color: var(--color-electric-blue);
+    }
+
+    &.dot-5 {
+      --dot-distance-top: 25%;
+      --dot-distance-left: 73%;
+      --dot-color: var(--color-neon-green);
+    }
+
+    &.dot-6 {
+      --dot-distance-top: 30%;
+      --dot-distance-left: 30%;
+      --dot-color: var(--color-magenta-glow);
+    }
+
+    &.dot-7 {
+      --dot-distance-top: 35%;
+      --dot-distance-left: 80%;
+      --dot-color: var(--color-electric-blue);
+    }
+
+    &.dot-8 {
+      --dot-distance-top: 40%;
+      --dot-distance-left: 20%;
+      --dot-color: var(--color-neon-green);
+    }
+
+    &.dot-9 {
+      --dot-distance-top: 45%;
+      --dot-distance-left: 70%;
+      --dot-color: var(--color-magenta-glow);
+    }
+
+    &.dot-10 {
+      --dot-distance-top: 50%;
+      --dot-distance-left: 50%;
+      --dot-color: var(--color-electric-blue);
+    }
+
+    &.dot-11 {
+      --dot-distance-top: 55%;
+      --dot-distance-left: 90%;
+      --dot-color: var(--color-neon-green);
+    }
+
+    &.dot-12 {
+      --dot-distance-top: 60%;
+      --dot-distance-left: 10%;
+      --dot-color: var(--color-magenta-glow);
+    }
+
+    &.dot-13 {
+      --dot-distance-top: 65%;
+      --dot-distance-left: 60%;
+      --dot-color: var(--color-electric-blue);
+    }
+
+    &.dot-14 {
+      --dot-distance-top: 70%;
+      --dot-distance-left: 40%;
+      --dot-color: var(--color-neon-green);
+    }
+
+    &.dot-15 {
+      --dot-distance-top: 75%;
+      --dot-distance-left: 80%;
+      --dot-color: var(--color-magenta-glow);
+    }
+
+    &.dot-16 {
+      --dot-distance-top: 80%;
+      --dot-distance-left: 30%;
+      --dot-color: var(--color-electric-blue);
+    }
+
+    &.dot-17 {
+      --dot-distance-top: 85%;
+      --dot-distance-left: 70%;
+      --dot-color: var(--color-neon-green);
+    }
+
+    &.dot-18 {
+      --dot-distance-top: 90%;
+      --dot-distance-left: 50%;
+      --dot-color: var(--color-magenta-glow);
+    }
+
+    &.dot-19 {
+      --dot-distance-top: 95%;
+      --dot-distance-left: 90%;
+      --dot-color: var(--color-electric-blue);
+    }
+  }
+
+  > .hero-section {
     position: relative;
-    width: 100dvw;
+    width: 100%;
+    height: var(--height-section);
     animation-timeline: --container-scroll-timeline;
-    animation-name: keep-in-view;
-    animation-range: contain 0% contain 100%;
-    animation-duration: 1ms; /* Firefox requires this to apply the animation */
     animation-timing-function: linear;
     animation-fill-mode: both;
-    height: var(--height-section);
+    animation-range: contain 0% contain 100%;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-name: keep-in-view;
 
     > video {
       position: absolute;
@@ -116,15 +251,15 @@
           animation-name: sentence;
 
           &:nth-child(1) {
-            animation-range: contain 0% contain 34%;
+            animation-range: contain 0% contain 40%;
           }
 
           &:nth-child(2) {
-            animation-range: contain 33% contain 67%;
+            animation-range: contain 30% contain 70%;
           }
 
           &:nth-child(3) {
-            animation-range: contain 66% contain 100%;
+            animation-range: contain 60% contain 100%;
           }
         }
       }
@@ -144,19 +279,19 @@
 
 @keyframes sentence {
   0% {
-    transform: translate(-50%, calc(-50% - 1rem));
+    transform: translate(-50%, calc(-50% + 2rem));
     opacity: 0;
   }
   10% {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50% + 1rem);
     opacity: 1;
   }
   90% {
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50% - 1rem);
     opacity: 1;
   }
   100% {
-    transform: translate(-50%, calc(-50% + 1rem));
+    transform: translate(-50%, calc(-50% - 2rem));
     opacity: 0;
   }
 }
