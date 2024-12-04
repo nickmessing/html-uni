@@ -19,7 +19,9 @@ const isOpen = defineModel<boolean>('isOpen', {
       </ul>
     </div>
     <div class="menu-group">
-      <a href="/contact" @click="isOpen = false">Contact</a>
+      <RouterLink activeClass="active glitch" data-glitch-content="Contact" to="/contact" @click="isOpen = false">
+        Contact
+      </RouterLink>
     </div>
   </nav>
   <Transition name="fade">
