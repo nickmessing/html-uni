@@ -19,13 +19,6 @@ const isOpen = defineModel<boolean>('isOpen', {
       </ul>
     </div>
     <div class="menu-group">
-      <a href="/projects" @click="isOpen = false">Proiecte</a>
-      <ul>
-        <li><a href="#open-source" @click="isOpen = false">Contribuții Open Source</a></li>
-        <li><a href="#technologies" @click="isOpen = false">Tehnologii</a></li>
-      </ul>
-    </div>
-    <div class="menu-group">
       <a href="/contact" @click="isOpen = false">Contact</a>
     </div>
   </nav>
