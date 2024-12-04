@@ -1,6 +1,6 @@
 <template>
-  <div class="hero-section-container">
-    <div id="hero" class="hero-section">
+  <div id="hero" class="hero-section-container">
+    <div class="hero-section">
       <video autoplay loop muted>
         <source src="https://assets.html.nickmessing.com/background.webm" type="video/webm" />
       </video>
