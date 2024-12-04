@@ -55,6 +55,7 @@
 
   .animation {
     position: relative;
+    width: 100%;
     height: 20rem;
 
     .image-container {
@@ -119,6 +120,19 @@
           }
         }
       }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 2rem;
+    height: 100%;
+
+    .animation {
+      width: 20rem;
+      height: 100%;
     }
   }
 }
