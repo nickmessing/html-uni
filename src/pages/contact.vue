@@ -1,8 +1,5 @@
 <template>
   <div class="contact-page">
-    <!-- Email: ceo@nickmessing.com
-    Telefon: +37378272059 -->
-
     <h1>Date de contact</h1>
 
     <p>
