@@ -26,11 +26,7 @@ const isOpen = defineModel<boolean>('isOpen', {
       </ul>
     </div>
     <div class="menu-group">
-      <a href="/contact-and-demo" @click="isOpen = false">Contact și Demo</a>
-      <ul>
-        <li><a href="#interactive-demo" @click="isOpen = false">Demo Interactiv</a></li>
-        <li><a href="#contact" @click="isOpen = false">Contact</a></li>
-      </ul>
+      <a href="/contact" @click="isOpen = false">Contact</a>
     </div>
   </nav>
   <Transition name="fade">
@@ -111,6 +107,10 @@ const isOpen = defineModel<boolean>('isOpen', {
 
       > li {
         padding-left: 2rem;
+
+        @media screen and (min-width: 768px) {
+          padding-left: 0;
+        }
 
         > a {
           transition: color 0.15s ease;

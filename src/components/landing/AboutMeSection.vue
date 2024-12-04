@@ -70,11 +70,11 @@
       }
       &.js {
         animation: rotate-1 6s infinite linear;
-        animation-delay: 2s;
+        animation-delay: -4s;
       }
       &.vue {
         animation: rotate-1 6s infinite linear;
-        animation-delay: 4s;
+        animation-delay: -2s;
       }
 
       img {
