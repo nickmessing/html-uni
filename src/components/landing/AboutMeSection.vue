@@ -55,7 +55,6 @@
 
   .animation {
     position: relative;
-    background-color: var(--color-electric-blue-transparent);
     height: 20rem;
 
     .image-container {
